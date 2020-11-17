@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+
 int BusquedaBinaria(int A[],int left,int right, int x){
     if(right >= left){
         int mid = left+(right-left)/2;
@@ -19,16 +20,21 @@ int BusquedaBinaria(int A[],int left,int right, int x){
 }
 
 int main(){
-    int n , t , r; 
-    int arreglo[] = {2,4,5,9,12,15,16,23,29,51};
-    cout<<"Ingrese elemento : "; cin>> n ;  
+    int elemento , n , t , index; // elemento = lo que se busca , n = numero , t = cantidad de elementos, index = posicion
+    int arreglo[100]; //Array
+
+    cout<<"Cuantos elementos habra en su arreglo?: "; cin >> n; 
+    for(int i = 0 ; i < n ; i++){
+        cout<<"Ingrese el dato ["<<i+1<<"] del arreglo: "; cin>> arreglo[i];
+    }
     t = sizeof(arreglo) / sizeof(arreglo[0]); 
-    r = BusquedaBinaria(arreglo,0,t-1,n); 
-    if(r == -1 ){
+    cout<<"Ingrese elemento a buscar : "; cin>> elemento ;  
+    index = BusquedaBinaria(arreglo,0,t-1,elemento); 
+    if(index == -1 ){
         cout<<"Elemento no encontrado" ; 
     }
     else{
-        cout<<"Elemento encontrado en la posicion: " << r ; 
+        cout<<"Elemento encontrado en la posicion: "<< index ; 
     }
     cout<<endl;
 }
