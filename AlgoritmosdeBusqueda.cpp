@@ -22,10 +22,10 @@ int main(){
     localizador = Busqueda(arreglo, t , elemento); 
     switch(localizador){
         case 0:
-            cout<<"Numero "<<elemento<<" encontrado";
+            cout<<"Numero "<<elemento<<" encontrado"<<endl;
         break;
         case 1:
-            cout<<"El numero "<<elemento<<" no fue encontrado";
+            cout<<"El numero "<<elemento<<" no fue encontrado"<<endl;
         break;
     }
 }
